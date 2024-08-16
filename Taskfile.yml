@@ -20,3 +20,18 @@ tasks:
     cmds:
       - git config --global user.email "dignory.luna777@gmail.com"
       - git config --global user.name "Dignory Carmona"
+
+  start:
+    cmds:
+      - yarn install
+      - yarn dev
+      
+  commit:
+    cmds:
+      - yarn build
+      - git commit -a
+      
+  change-message:
+    cmds:
+      - git commit --amend
+      - git push -f origin "main"
